@@ -20,7 +20,7 @@ Adding 2.1 and 98 (second arg is optional and 98 by default)
     100
 
 Adding 100.3 and -2
-	>>> add_integer(100.3, -2)
+	g>>> add_integer(100.3, -2)
 	98
 
 Adding an integer number and a string
@@ -63,13 +63,17 @@ Adding two float numbers
     >>> add_integer(2.9, 2.9)
     4
 
-Subtracting 98 and 1
+Adding 98 and -1
     >>> add_integer(-1)
     97
 
 Case Overflow:
 
     >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(2, float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
