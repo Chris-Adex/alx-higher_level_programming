@@ -13,13 +13,10 @@ def matrix_divided(matrix, div):
         TypeError: If the matrix contains non-numbers.
                    If the matrix contains rows of different sizes.
                    If div is not an int or float.
-        
         ZeroDivisionError: If div is 0.
-    
     Returns:
         A new matrix representing the result of the division.
     """
-    
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(ele, int) or isinstance(ele, float))
